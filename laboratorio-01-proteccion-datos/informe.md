@@ -129,10 +129,13 @@ Los datos deben conservarse mientras exista una finalidad legítima o una obliga
 
 **1- ¿Qué técnica utilizarías para un área de soporte?**
 Utilizaría el enmascaramiento de datos mediante una vista restringida, como v_clientes_soporte, para mostrar parcialmente el correo electrónico, el teléfono y el RFC. De esta manera, el personal de soporte puede consultar la información necesaria para realizar sus actividades sin visualizar todos los datos personales completos.
+
 **2- ¿Qué técnica utilizarías para un área de analítica?**
 Utilizaría la seudonimización, sustituyendo los identificadores originales por tokens UUID y separando el mapa de correspondencia de los datos analíticos. Esto permite analizar información de los clientes sin exponer directamente sus identidades. También aplicaría la generalización de atributos cuando sea necesario reducir el riesgo de identificación.
+
 **3- ¿Qué técnica utilizarías para publicar estadísticas?**
 Utilizaría la anonimización mediante la eliminación de identificadores directos, la generalización de atributos y la supresión de grupos pequeños. Por ejemplo, publicaría cantidades de clientes por rangos de edad y regiones generales, evitando mostrar registros individuales. También evaluaría el riesgo de reidentificación antes de divulgar los resultados.
+
 **4- ¿Por qué ninguna de estas técnicas sustituye al control de acceso?**
 Porque estas técnicas protegen los datos de diferentes maneras, pero no impiden por sí solas que usuarios no autorizados consulten las tablas originales o accedan a información sensible. El control de acceso permite definir quién puede consultar, modificar o eliminar los datos mediante roles y permisos. Por ello, es necesario combinar las técnicas de protección con el principio de mínimo privilegio, la separación de funciones y la revisión periódica de los permisos para mantener la seguridad de la información.
 
